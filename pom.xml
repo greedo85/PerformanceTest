@@ -9,7 +9,7 @@
 						 <!-- identyfikuje projekt w sensie ogólnym -->
   <groupId>pl.andrzejkuczmierowski</groupId>
   <!-- identyfikuje pakiet, podprojekt -->
-  <artifactId>TransportCompany</artifactId>
+  <artifactId>PerformanceTest</artifactId>
   <version>1.0</version>
   
     <properties>
