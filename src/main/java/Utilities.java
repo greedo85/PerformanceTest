@@ -25,7 +25,8 @@ public class Utilities {
         return new Person(name, surname);
     }
 
-    public void addToArray( int number ) {
+    public void addToArray ( int number )
+    {
         people = new Person[number];
         for (int i = 0; i < people.length; i++) {
             people[i] = generatePerson();
