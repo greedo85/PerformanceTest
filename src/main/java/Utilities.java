@@ -1,11 +1,17 @@
 import lombok.Getter;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
 
 @Getter
 public class Utilities {
 
     Person[] people;
+    List<Person> peopleArrayList=new ArrayList<>();
+    List<Person> peopleLinkedList=new LinkedList<>();
+
 
     public Person generatePerson() {
         String name = "";
