@@ -10,6 +10,9 @@ public class Utilities {
     List<Person> peopleLinkedList = new LinkedList<>();
     Set<Person> peopleHashSet = new HashSet<>();
     Set<Person> peopleLikedHashSet = new LinkedHashSet<>();
+    private long start;
+    private long end;
+    private long total;
 
     public Person generatePerson() {
         String name = "";
@@ -24,7 +27,6 @@ public class Utilities {
             surname += (char) (min1 + (int) (Math.random() * ((max1 - min1) + 1)));
             surname += (char) (min2 + (int) (Math.random() * ((max2 - min2) + 1)));
         }
-
         return new Person(name, surname);
     }
 
@@ -36,16 +38,21 @@ public class Utilities {
     }
 
     public void addToCollection( Collection collection ) {
-
+        start = System.nanoTime();
         collection.addAll(Arrays.asList(people));
+        end = System.nanoTime();
+        total = end - start;
     }
 
     public Person getFromCollection( Person person, Collection<Person> collection ) {
+        start = System.nanoTime();
         for (Person p : collection) {
             if (p.equals(person)) {
                 return p;
             }
         }
+        end = System.nanoTime();
+        total = end - start;
         return null;
     }
 }

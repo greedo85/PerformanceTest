@@ -1,9 +1,9 @@
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
-public class generatePerson {
+public class AddToArrayTest {
 
     @Test
-    public void generateNameSurnameTest()
+    public void addToArrayTest()
     {
         //given
         Utilities utilities=new Utilities();
