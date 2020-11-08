@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class addToCollectionTest {
+public class UtilitiesTest {
 
     @Test
     public void addToCollectionTest() {
@@ -22,8 +22,7 @@ public class addToCollectionTest {
     }
 
     @Test
-    public void getFromCollectionTest()
-    {
+    public void getFromCollectionTest() {
         //given
         Utilities utilities = new Utilities();
 

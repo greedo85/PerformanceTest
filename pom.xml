@@ -6,7 +6,7 @@
 					   
 					   
 					     <!-- The Basics -->
-						 <!-- identyfikuje projekt w sensie ogólnym -->
+
   <groupId>pl.andrzejkuczmierowski</groupId>
   <!-- identyfikuje pakiet, podprojekt -->
   <artifactId>PerformanceTest</artifactId>

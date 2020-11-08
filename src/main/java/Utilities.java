@@ -1,17 +1,15 @@
 import lombok.Getter;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 @Getter
 public class Utilities {
 
     Person[] people;
-    List<Person> peopleArrayList=new ArrayList<>();
-    List<Person> peopleLinkedList=new LinkedList<>();
-
+    List<Person> peopleArrayList = new ArrayList<>();
+    List<Person> peopleLinkedList = new LinkedList<>();
+    Set<Person> peopleHashSet = new HashSet<>();
+    Set<Person> peopleLikedHashSet = new LinkedHashSet<>();
 
     public Person generatePerson() {
         String name = "";
@@ -26,13 +24,11 @@ public class Utilities {
             surname += (char) (min1 + (int) (Math.random() * ((max1 - min1) + 1)));
             surname += (char) (min2 + (int) (Math.random() * ((max2 - min2) + 1)));
         }
-        System.out.println("name:" + name);
-        System.out.println("surname:" + surname);
+
         return new Person(name, surname);
     }
 
-    public void addToArray ( int number )
-    {
+    public void addToArray( int number ) {
         people = new Person[number];
         for (int i = 0; i < people.length; i++) {
             people[i] = generatePerson();
@@ -40,8 +36,16 @@ public class Utilities {
     }
 
     public void addToCollection( Collection collection ) {
-        for (int i = 0; i < people.length; i++) {
-            collection.add(people[i]);
+
+        collection.addAll(Arrays.asList(people));
+    }
+
+    public Person getFromCollection( Person person, Collection<Person> collection ) {
+        for (Person p : collection) {
+            if (p.equals(person)) {
+                return p;
+            }
         }
+        return null;
     }
 }

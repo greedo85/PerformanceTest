@@ -1,4 +1,4 @@
-# PerformanceTest
+# Performance
 
 Projekt ma przetestować szybkość operacji pobierania, wyszukiwania i usuwania, dla ArrayList, LinkedList, HashSet, LinkedHashSet, TreeSet
 
