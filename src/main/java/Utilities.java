@@ -12,6 +12,7 @@ public class Utilities {
     List<Person> peopleLinkedList = new LinkedList<>();
     Set<Person> peopleHashSet = new HashSet<>();
     Set<Person> peopleLikedHashSet = new LinkedHashSet<>();
+    Set<Person> peopleTreeSet = new TreeSet<>();
     private long start;
     private long end;
     private long total;
@@ -49,7 +50,7 @@ public class Utilities {
         collection.addAll(Arrays.asList(people));
         end = System.nanoTime();
         total = end - start;
-        System.out.println("Czas dodawania "+people.length+" obiektów do "+collection.getClass()+" to: "+total);
+        System.out.println("Czas dodawania "+people.length+" obiektów do "+collection.getClass()+" to: "+total+" ms");
     }
 
     public Person getFromCollection( Person person, Collection<Person> collection ) {
@@ -69,6 +70,6 @@ public class Utilities {
         collection.removeAll(Arrays.asList(people));
         end = System.nanoTime();
         total = end - start;
-        System.out.println("Czas usuwania "+people.length+" obiektów do "+collection.getClass()+" to: "+total);
+        System.out.println("Czas usuwania "+people.length+" obiektów do "+collection.getClass()+" to: "+total+" ms");
     }
 }

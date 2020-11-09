@@ -26,7 +26,6 @@ public class UtilitiesTest {
         Utilities utilities = new Utilities(100);
 
         //when
-
         utilities.addToCollection(utilities.peopleHashSet);
         utilities.getFromCollection(utilities.people[1], utilities.peopleHashSet);
 
