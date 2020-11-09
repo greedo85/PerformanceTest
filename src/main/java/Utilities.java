@@ -62,6 +62,7 @@ public class Utilities {
         }
         end = System.nanoTime();
         total = end - start;
+        System.out.println("Czas pobrania "+person+" z "+collection.getClass()+" to: "+total+" ms");
         return null;
     }
 
