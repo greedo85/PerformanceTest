@@ -76,9 +76,9 @@ public class Main {
             }
             while (choice != 'q');
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println(e.toString());
+            System.out.println("Poza zakresem");
         } catch (InputMismatchException e) {
-            System.out.println(e.toString());
+            System.out.println("Zły wybór");
         }
     }
 
