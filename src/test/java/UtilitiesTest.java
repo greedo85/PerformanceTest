@@ -42,7 +42,7 @@ public class UtilitiesTest {
         //when
 
         utilities.addToCollection(utilities.peopleHashSet);
-        utilities.removeFromCollection(utilities.peopleHashSet);
+        utilities.removeAllFromCollection(utilities.peopleHashSet);
         //then
         assertFalse(utilities.peopleHashSet.contains(utilities.people[1]));
     }

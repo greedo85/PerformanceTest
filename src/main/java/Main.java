@@ -37,15 +37,15 @@ public class Main {
                         switch (choice) {
                             case '1':
                                 utilities = new Utilities(1000);
-                                remove(utilities);
+                                removeAll(utilities);
                                 break;
                             case '2':
                                 utilities = new Utilities(10000);
-                                remove(utilities);
+                                removeAll(utilities);
                                 break;
                             case '3':
                                 utilities = new Utilities(1000000);
-                                remove(utilities);
+                                removeAll(utilities);
                                 break;
                         }
                         break;
@@ -71,6 +71,31 @@ public class Main {
                                 pickOne(utilities, utilities.people[index]);
                                 break;
                         }
+                        break;
+                    case 'j':
+                        choice = scanner.next().charAt(0);
+                        switch (choice) {
+                            case '1':
+                                utilities = new Utilities(1000);
+                                System.out.println("Podaj index obiektu Person: ");
+                                index = scanner.nextInt();
+                                removeOne(utilities, utilities.people[index]);
+                                break;
+                            case '2':
+                                utilities = new Utilities(10000);
+                                System.out.println("Podaj index obiektu Person: ");
+                                index = scanner.nextInt();
+                                removeOne(utilities, utilities.people[index]);
+                                break;
+                            case '3':
+                                utilities = new Utilities(1000000);
+                                System.out.println("Podaj index obiektu Person: ");
+                                index = scanner.nextInt();
+                                removeOne(utilities, utilities.people[index]);
+                                break;
+                        }
+                        break;
+
                 }
 
             }
@@ -87,11 +112,15 @@ public class Main {
         System.out.println("1 - kolekcji 1000 obiektów");
         System.out.println("2 - kolekcji 10000 obiektów");
         System.out.println("3 - kolekcji 1000000 obiektów");
-        System.out.println("u - Przetestuj szybość usuwania dla: ");
+        System.out.println("u - Przetestuj szybość usuwania wszystkich dla: ");
         System.out.println("1 - kolekcji 1000 obiektów");
         System.out.println("2 - kolekcji 10000 obiektów");
         System.out.println("3 - kolekcji 1000000 obiektów");
         System.out.println("p - Przetestuj szybość pobrania jednego obiektu dla: ");
+        System.out.println("1 - kolekcji 1000 obiektów");
+        System.out.println("2 - kolekcji 10000 obiektów");
+        System.out.println("3 - kolekcji 1000000 obiektów");
+        System.out.println("j - Przetestuj szybość usunięcia jednego obiektu dla: ");
         System.out.println("1 - kolekcji 1000 obiektów");
         System.out.println("2 - kolekcji 10000 obiektów");
         System.out.println("3 - kolekcji 1000000 obiektów");
@@ -105,12 +134,17 @@ public class Main {
         utilities.addToCollection(utilities.peopleTreeSet);
     }
 
-    public static void remove( Utilities utilities ) {
-        utilities.removeFromCollection(utilities.peopleArrayList);
-        utilities.removeFromCollection(utilities.peopleLikedHashSet);
-        utilities.removeFromCollection(utilities.peopleLinkedList);
-        utilities.removeFromCollection(utilities.peopleHashSet);
-        utilities.removeFromCollection(utilities.peopleTreeSet);
+    public static void removeAll( Utilities utilities ) {
+        utilities.removeAllFromCollection(utilities.peopleArrayList);
+        utilities.removeAllFromCollection(utilities.peopleLikedHashSet);
+        utilities.removeAllFromCollection(utilities.peopleLinkedList);
+        utilities.removeAllFromCollection(utilities.peopleHashSet);
+        utilities.removeAllFromCollection(utilities.peopleTreeSet);
+    }
+
+    public static void removeOne(Utilities utilities, Person person)
+    {
+
     }
 
     public static void pickOne( Utilities utilities, Person person ) {

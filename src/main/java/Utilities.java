@@ -66,11 +66,23 @@ public class Utilities {
         return null;
     }
 
-    public void removeFromCollection( Collection<Person> collection ) {
+    public void removeAllFromCollection( Collection<Person> collection ) {
         start = System.nanoTime();
         collection.removeAll(Arrays.asList(people));
         end = System.nanoTime();
         total = end - start;
         System.out.println("Czas usuwania "+people.length+" obiektów do "+collection.getClass()+" to: "+total+" ms");
+    }
+    public void removeOneFromCollection(Collection<Person>collection,Person person)
+    {
+        start = System.nanoTime();
+        for (Person p : collection) {
+            if (p.equals(person)) {
+                collection.remove(p);
+            }
+        }
+        end = System.nanoTime();
+        total = end - start;
+        System.out.println("Czas usunięcia "+person+" z "+collection.getClass()+" to: "+total+" ms");
     }
 }
