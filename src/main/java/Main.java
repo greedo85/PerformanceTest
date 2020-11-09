@@ -144,7 +144,11 @@ public class Main {
 
     public static void removeOne(Utilities utilities, Person person)
     {
-
+        utilities.removeOneFromCollection(utilities.peopleArrayList,person);
+        utilities.removeOneFromCollection(utilities.peopleLikedHashSet,person);
+        utilities.removeOneFromCollection(utilities.peopleLinkedList,person);
+        utilities.removeOneFromCollection(utilities.peopleHashSet,person);
+        utilities.removeOneFromCollection(utilities.peopleTreeSet,person);
     }
 
     public static void pickOne( Utilities utilities, Person person ) {
