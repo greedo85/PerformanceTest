@@ -6,9 +6,8 @@ public class AddToArrayTest {
     public void addToArrayTest()
     {
         //given
-        Utilities utilities=new Utilities();
+        Utilities utilities=new Utilities(1);
         //when
-        utilities.addToArray(1);
 
         //then
         assertEquals(utilities.getPeople().length,1);

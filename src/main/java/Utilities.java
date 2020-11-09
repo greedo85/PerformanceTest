@@ -1,8 +1,10 @@
 import lombok.Getter;
+import lombok.ToString;
 
 import java.util.*;
 
 @Getter
+@ToString
 public class Utilities {
 
     Person[] people;
@@ -13,6 +15,11 @@ public class Utilities {
     private long start;
     private long end;
     private long total;
+    int number;
+    public Utilities( int number ) {
+        this.number = number;
+        addToArray(number);
+    }
 
     public Person generatePerson() {
         String name = "";
@@ -42,6 +49,7 @@ public class Utilities {
         collection.addAll(Arrays.asList(people));
         end = System.nanoTime();
         total = end - start;
+        System.out.println("Czas dodawania "+people.length+" obiektów do "+collection.getClass()+" to: "+total);
     }
 
     public Person getFromCollection( Person person, Collection<Person> collection ) {
@@ -54,5 +62,13 @@ public class Utilities {
         end = System.nanoTime();
         total = end - start;
         return null;
+    }
+
+    public void removeFromCollection( Collection<Person> collection ) {
+        start = System.nanoTime();
+        collection.removeAll(Arrays.asList(people));
+        end = System.nanoTime();
+        total = end - start;
+        System.out.println("Czas usuwania "+people.length+" obiektów do "+collection.getClass()+" to: "+total);
     }
 }
