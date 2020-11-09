@@ -86,15 +86,15 @@ public class Main {
         System.out.println("d - Przestestuj szybkość dodawania dla:");
         System.out.println("1 - kolekcji 1000 obiektów");
         System.out.println("2 - kolekcji 10000 obiektów");
-        System.out.println("3 - kolekcji 100000 obiektów");
+        System.out.println("3 - kolekcji 1000000 obiektów");
         System.out.println("u - Przetestuj szybość usuwania dla: ");
         System.out.println("1 - kolekcji 1000 obiektów");
         System.out.println("2 - kolekcji 10000 obiektów");
-        System.out.println("3 - kolekcji 100000 obiektów");
+        System.out.println("3 - kolekcji 1000000 obiektów");
         System.out.println("p - Przetestuj szybość pobrania jednego obiektu dla: ");
         System.out.println("1 - kolekcji 1000 obiektów");
         System.out.println("2 - kolekcji 10000 obiektów");
-        System.out.println("3 - kolekcji 100000 obiektów");
+        System.out.println("3 - kolekcji 1000000 obiektów");
     }
 
     private static void add( Utilities utilities ) {
